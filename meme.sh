@@ -6,17 +6,18 @@ header=$3
 footer=$4
 
 font=/Library/Fonts/Impact.ttf
-size=1024x
 
-convert $src       \
-  -resize $size    \
-  -background none \
-  -font $font      \
-  -pointsize 96    \
-  -fill white      \
-  -stroke black    \
-  -strokewidth 2   \
-  -size $size      \
-    -gravity north caption:"$header" -composite \
-    -gravity south caption:"$footer" -composite \
-  $dest
+width=`identify -format %w ${src}`
+let caption_height=width/8
+let strokewidth=width/500
+
+convert ${src}       \
+  -background none   \
+  -font ${font}      \
+  -fill white        \
+  -stroke black      \
+  -strokewidth ${strokewidth}       \
+  -size ${width}x${caption_height}  \
+    -gravity north caption:"${header}" -composite \
+    -gravity south caption:"${footer}" -composite \
+  ${dest}
