@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="readme.css" type="text/css" />
+</head>
+<body>
+<h1 id="create-meme-using-imagemagick">Create Meme using ImageMagick</h1>
+<p>ImageMagick can caption stock images, but it cannot make them meme unless you provide the right text. This tool makes no attempt to make you more popular or snarky. It only attempt to make it easier for you to magnify your inner self.</p>
+<p>The scripts here are simply highlighting usage patterns of the <code>convert</code> command which are conducive to applying captions to images.</p>
+<p>Good luck ruling the Interwebs!</p>
+<h2 id="install-imagemagick">Install ImageMagick</h2>
+<ol style="list-style-type: decimal">
+<li><code>brew install imagemagick</code></li>
+</ol>
+<h2 id="run-the-shell-script">Run the Shell Script</h2>
+<ol style="list-style-type: decimal">
+<li><code>./meme.sh duck.jpg test.jpg &quot;Top Caption&quot; &quot;Bottom Caption&quot;</code></li>
+</ol>
+<h2 id="run-the-ruby-script">Run the Ruby Script</h2>
+<ol style="list-style-type: decimal">
+<li><code>./meme.rb --src duck.jpg --dest test.jpg --north &quot;Top&quot; --center &quot;Middle&quot; --south &quot;Bottom&quot;</code></li>
+</ol>
+<h2 id="whats-it-doing">What's it Doing?</h2>
+<p><img class="pure-img" src="readme-annotated.png" alt="Annotated Source"></p>
+<h3 id="source">Source</h3>
+<ol style="list-style-type: decimal">
+<li><code>meme.sh</code></li>
+<li><code>meme.rb</code></li>
+</ol>
+<h2 id="optional-osx-users-might-want-setup-font-registry">[Optional] OSX Users Might Want Setup Font Registry</h2>
+<ol style="list-style-type: decimal">
+<li><code>mkdir $HOME/.config/ImageMagick</code></li>
+<li><code>cd path/to/here</code></li>
+<li><code>./typemap_gen.rb /Library/Fonts/*.ttf &gt; $HOME/.config/ImageMagick/type.xml</code></li>
+</ol>
+<h1 id="thanks">Thanks</h1>
+<dl>
+<dt>ImageMagick</dt>
+<dd>http://www.imagemagick.org/Usage/annotating/
+</dd>
+<dt>Wikimedia</dt>
+<dd>https://commons.wikimedia.org/wiki/File:Cute_South_African_Duck.JPG
+</dd>
+<dt>buttondown.css</dt>
+<dd>https://gist.github.com/ryangray/1882525
+</dd>
+</dl>
+<h1 id="maintence">Maintence</h1>
+<h2 id="generate-index.html">Generate index.html</h2>
+<p><code>pandoc README.md -c http://yui.yahooapis.com/pure/0.6.0/pure-min.css -c style.css -o index.html</code></p>
+</body>
+</html>
