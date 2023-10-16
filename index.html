@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 id="create-meme-using-imagemagick">Create Meme using ImageMagick</h1>
-<p>ImageMagick can caption stock images, but it cannot make them meme unless you provide the right text. This tool makes no attempt to make you more popular or snarky. It only attempt to make it easier for you to magnify your inner self.</p>
+<p>ImageMagick can caption stock images, but it cannot make them a meme unless <em>you</em> provide the right text. This tool makes no attempt to make you more popular or snarky. It only attempts to make it easier for you to magnify your inner self.</p>
 <p>The scripts here are simply highlighting usage patterns of the <code>convert</code> command which are conducive to applying captions to images.</p>
 <p>Good luck ruling the Interwebs!</p>
 <h2 id="install-imagemagick">Install ImageMagick</h2>
@@ -46,12 +46,13 @@
 <dt>Wikimedia</dt>
 <dd>https://commons.wikimedia.org/wiki/File:Cute_South_African_Duck.JPG
 </dd>
-<dt>buttondown.css</dt>
-<dd>https://gist.github.com/ryangray/1882525
+<dt>YUI Pure CSS</dt>
+<dd>http://purecss.io/base/
 </dd>
 </dl>
 <h1 id="maintence">Maintence</h1>
 <h2 id="generate-index.html">Generate index.html</h2>
-<p><code>pandoc README.md -c http://yui.yahooapis.com/pure/0.6.0/pure-min.css -c style.css -o index.html</code></p>
+<p><code>index.html</code> is used for gh-pages. If this README.md is changed, you should updated the <code>index.html</code> file using: <code>pandoc README.md -c readme.css -o index.html</code></p>
+<p><code>brew install pandoc</code> if you don't have it already.</p>
 </body>
 </html>

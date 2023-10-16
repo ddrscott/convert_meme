@@ -1,9 +1,9 @@
 Create Meme using ImageMagick
 =============================
 
-ImageMagick can caption stock images, but it cannot make them meme unless
-you provide the right text. This tool makes no attempt to make you more
-popular or snarky. It only attempt to make it easier for you to magnify your
+ImageMagick can caption stock images, but it cannot make them a meme unless
+_you_ provide the right text. This tool makes no attempt to make you more
+popular or snarky. It only attempts to make it easier for you to magnify your
 inner self.
 
 The scripts here are simply highlighting usage patterns of the `convert`
