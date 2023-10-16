@@ -1,4 +1,4 @@
-@import '//yui.yahooapis.com/pure/0.6.0/base-min.css';
+@import 'https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css';
 
 body {
     padding: 5%;
